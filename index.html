@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emerging Learning | Primary One</title>
+
+<style>
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:#f4f6f8;
+  margin:0;
+  color:#222;
+}
+header{
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:white;
+  padding:25px;
+  text-align:center;
+}
+header h1{margin:0; font-size:2.5rem;}
+header p{opacity:0.9; font-size:1rem; margin-top:5px;}
+.logo-img{
+  width:80px;
+  height:80px;
+  object-fit:contain;
+  margin-bottom:10px;
+  border-radius:15px;
+  background:white;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+.class-buttons{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:10px;
+  margin-bottom:20px;
+}
+.class-buttons button{
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  font-weight:bold;
+  color:white;
+  cursor:pointer;
+}
+.p1{background:#2196f3;}
+.p2{background:#4caf50;}
+.p3{background:#ff9800;}
+.p4{background:#9c27b0;}
+.p5{background:#3f51b5;}
+.p6{background:#f44336;}
+.card{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  margin-bottom:20px;
+}
+h2{color:#203a43;}
+.hidden{display:none;}
+.numbers{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:10px;
+}
+.numbers span{
+  background:#2196f3;
+  color:white;
+  padding:10px 15px;
+  border-radius:8px;
+  font-weight:bold;
+  font-size:1.2rem;
+}
+footer{
+  text-align:center;
+  font-size:0.8rem;
+  color:#666;
+  padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <!-- LOGO IMAGE -->
+  <img src="A_landing_page_website_for_Emerging_Learning,_a_pl.png" alt="Emerging Learning Logo" class="logo-img">
+  <h1>Emerging Learning</h1>
+  <p>Making Mathematics Easy (Primary 1 – 6)</p>
+</header>
+
+<div class="container">
+
+  <!-- CLASS SELECTION -->
+  <div class="class-buttons">
+    <button class="p1" onclick="showClass('p1')">Primary 1</button>
+    <button class="p2" onclick="showClass('p2')">Primary 2</button>
+    <button class="p3" onclick="showClass('p3')">Primary 3</button>
+    <button class="p4" onclick="showClass('p4')">Primary 4</button>
+    <button class="p5" onclick="showClass('p5')">Primary 5</button>
+    <button class="p6" onclick="showClass('p6')">Primary 6</button>
+  </div>
+
+  <!-- PRIMARY ONE -->
+  <div id="p1" class="class-content hidden">
+    
+    <!-- SCHEME OF WORK -->
+    <div class="card">
+      <h2>Primary One – First Term Scheme of Work</h2>
+      <p>Week 1: Counting Numbers 1–10</p>
+      <p>Week 2: Counting Numbers 11–20</p>
+      <p>Week 3: Counting Numbers 21–50</p>
+      <p>Week 4: Counting Numbers 51–100</p>
+      <p>Week 5: Shapes (Circle, Square, Triangle)</p>
+      <p>Week 6: Shapes (Rectangle, Oval, Star)</p>
+      <p>Week 7: Addition 1–5</p>
+      <p>Week 8: Addition 6–10</p>
+      <p>Week 9: Subtraction 1–5</p>
+      <p>Week 10: Subtraction 6–10</p>
+      <p>Week 11: Measurement (length, height)</p>
+      <p>Week 12: Measurement (weight, capacity)</p>
+      <p>Week 13: Time (days, morning/afternoon)</p>
+      <p>Week 14: Time (reading clock to hour)</p>
+      <p>Week 15: Revision / Evaluation</p>
+    </div>
+
+    <!-- WEEK 1 LESSON NOTE -->
+    <div class="card">
+      <h2>Week 1: Counting Numbers 1–10</h2>
+      <p>Step 1: Count numbers aloud 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 using objects like sticks or beads.</p>
+      <p>Step 2: Show number cards 1–10 and ask pupils to identify each number.</p>
+      <p>Step 3: Pupils practice writing numbers 1–10 in their notebooks.</p>
+      <p>Step 4: Fun activity: "Number Hunt" – pupils find hidden numbers and arrange them in order.</p>
+
+      <!-- DISPLAY NUMBERS 1-10 -->
+      <div class="numbers">
+        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+        <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PLACEHOLDERS FOR OTHER CLASSES -->
+  <div id="p2" class="class-content hidden"><div class="card"><h2>Primary Two</h2><p>Content coming soon.</p></div></div>
+  <div id="p3" class="class-content hidden"><div class="card"><h2>Primary Three</h2><p>Content coming soon.</p></div></div>
+  <div id="p4" class="class-content hidden"><div class="card"><h2>Primary Four</h2><p>Content coming soon.</p></div></div>
+  <div id="p5" class="class-content hidden"><div class="card"><h2>Primary Five</h2><p>Content coming soon.</p></div></div>
+  <div id="p6" class="class-content hidden"><div class="card"><h2>Primary Six</h2><p>Content coming soon.</p></div></div>
+
+</div>
+
+<footer>
+  © 2026 Emerging Learning
+</footer>
+
+<script>
+function showClass(classId){
+  const sections = document.querySelectorAll('.class-content');
+  sections.forEach(sec => sec.classList.add('hidden'));
+  document.getElementById(classId).classList.remove('hidden');
+}
+</script>
+
+</body>
+</html>
